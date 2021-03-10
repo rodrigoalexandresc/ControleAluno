@@ -14,12 +14,5 @@ namespace ControleAluno.Repositories
         public DbSet<Disciplina> Disciplina { get; set; }
         public DbSet<Nota> Nota { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            //new ImpostoMap(modelBuilder.Entity<Imposto>());
-            //new LoteMap(modelBuilder.Entity<Lote>());
-        }
     }
 }

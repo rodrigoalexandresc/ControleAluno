@@ -61,7 +61,7 @@ namespace ControleAluno.Services
                 disciplinas.ToList().ForEach(disciplina => aluno.Notas.Add(new Nota
                 {
                     DisciplinaId = disciplina.Id,
-                    Valor = random.Next(0, 100) / 10
+                    Valor = random.Next(50, 100) / 10
                 }));
             });
         }

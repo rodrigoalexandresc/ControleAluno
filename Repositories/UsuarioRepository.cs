@@ -19,15 +19,5 @@ namespace ControleAluno.Repositories
         {
             return context.Usuario.FirstOrDefault(u => u.Login == loginViewModel.Usuario && u.Senha == loginViewModel.Senha);
         }
-
-        public void CriarUsuarioPadrao()
-        {
-            context.Usuario.Add(new Usuario
-            {
-                Login = "candidato-evolucional",
-                Senha = "123456"
-            });
-            context.SaveChanges();
-        }
     }
 }

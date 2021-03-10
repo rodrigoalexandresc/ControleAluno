@@ -1,0 +1,15 @@
+﻿CREATE DATABASE "projeto-evolucional";
+
+CREATE TABLE USUARIO ( ID INT IDENTITY, LOGIN VARCHAR(255), SENHA VARCHAR(255), PRIMARY KEY (Id) );
+
+CREATE TABLE ALUNO ( ID INT IDENTITY, NOME VARCHAR(255), PRIMARY KEY (Id) );
+CREATE TABLE DISCIPLINA ( ID INT, TITULO VARCHAR(100), PRIMARY KEY (Id) );
+CREATE TABLE NOTA ( 
+                    ID INT IDENTITY, 
+                    AlunoID INT NOT NULL,
+                    DisciplinaId INT NOT NULL,
+                    Valor NUMERIC(4,2),
+                    PRIMARY KEY (Id),
+                    CONSTRAINT nota_aluno_fkey FOREIGN KEY (AlunoId) REFERENCES ALUNO ON UPDATE CASCADE ON DELETE CASCADE,
+                    CONSTRAINT nota_disciplina_fkey FOREIGN KEY (DisciplinaId) REFERENCES DISCIPLINA ON UPDATE CASCADE ON DELETE CASCADE
+                );

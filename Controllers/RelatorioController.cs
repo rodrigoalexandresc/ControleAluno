@@ -34,6 +34,11 @@ namespace ControleAluno.Controllers
         {
             relatorioService.GerarRelatorio();
 
+            return RetornarArquivoGravado();
+        }
+
+        private IActionResult RetornarArquivoGravado()
+        {
             string filename = "Relatorio.xlsx";
             string filepath = "TempData/Relatorio.xlsx";
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);

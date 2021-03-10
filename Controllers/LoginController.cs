@@ -27,7 +27,6 @@ namespace ControleAluno.Controllers
                 return RedirectToAction("Index", "Relatorio");
             }
                 
-
             return View("AcessoNegado");
         }
     }
