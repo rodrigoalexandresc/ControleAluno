@@ -1,0 +1,27 @@
+﻿@model RelatorioViewModel
+
+@{
+    ViewData["Title"] = "Relatório";
+}
+
+<h1>Relatório de Notas de alunos</h1>
+
+@if (Model.DadosParaRelatorioCompilados)
+{ 
+    <h4>Dados para relatório compilados com sucesso!</h4> 
+}
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <a class="btn btn-primary" asp-action="CompilarDados">Botão 1</a>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-primary" asp-action="GerarRelatorio">Botão 2</a>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Voltar</a>
+</div>
+
